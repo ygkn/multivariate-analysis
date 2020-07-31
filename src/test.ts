@@ -27,6 +27,8 @@ import {
 
   console.log("coefficients", coefficients);
 
+  console.log(constant);
+
   const explanatoryVariablesList = explanatoryVariableLists[0].map((_, index) =>
     explanatoryVariableLists.map((values) => values[index])
   );

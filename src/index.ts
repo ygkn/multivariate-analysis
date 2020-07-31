@@ -5,14 +5,16 @@ import {
   coefficientOfDetermination,
   getConstant,
 } from "./MRA";
+import { constants } from "buffer";
 
 (async () => {
   const data = await loadCSV("./data-a.csv");
 
   const explanatoryVariableLists = [
     "保育所等数",
-    //  "高齢化比率",
+    // "失業者率",
     "婚姻率（人口千人当たり）",
+    "高齢化比率",
   ].map((key) => data.map((row) => row[key]).map((value) => parseFloat(value)));
 
   const objectiveVariableList = data.map((row) =>
@@ -31,6 +33,7 @@ import {
   );
 
   console.log("coefficients", coefficients);
+  console.log(constant);
 
   const explanatoryVariablesList = explanatoryVariableLists[0].map((_, index) =>
     explanatoryVariableLists.map((values) => values[index])
