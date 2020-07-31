@@ -10,5 +10,7 @@
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
   },
-  "dependencies": {}
+  "dependencies": {
+    "csv-parse": "^4.11.1"
+  }
 }
